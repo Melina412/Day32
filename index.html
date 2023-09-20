@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zeichenkettentrennungsmaschine</title>
+    <style>
+      label,
+      input {
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <form>
+          <label for="inputZeichenkette">Zu trennende Zeichenkette</label><br />
+          <input type="text" name="eingabe" id="inputZeichenkette" /><br />
+
+          <label for="inputTrennstelle">Woran trennen?</label><br />
+          <input type="text" name="eingabe" id="inputTrennstelle" />
+
+          <input type="radio" name="auswahl" id="radioDavor" />
+          <label for="radioDavor">Davor</label>
+
+          <input type="radio" name="auswahl" id="radioDanach" />
+          <label for="radioDanach">Danach</label><br />
+
+          <input
+            type="button"
+            value="Klick mich"
+            id="klick"
+            onclick="zeichentrennung()"
+          />
+        </form>
+
+        <div id="output"></div>
+      </section>
+    </main>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
