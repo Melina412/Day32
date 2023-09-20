@@ -1,23 +1,9 @@
 const zeichentrennung = () => {
-  //   1. value Zeichenkette abrufen
-  const string = document.getElementById("inputZeichenkette").value;
-  console.log({ string });
-
-  //   2. value Trennstelle abrufen
-  const substring = document.getElementById("inputTrennstelle").value;
-  console.log({ substring });
-
-  //   3. Ist Stelle in Zeichenkette vorhanden?
-  const included = string.includes(substring);
-  console.log({ included });
-
-  //   4. Index des Substrings
-  const index = string.indexOf(substring);
-  console.log({ index });
-
-  //   5. Länge des Substrings
-  const len = substring.length;
-  console.log({ len });
+  const string = document.getElementById("inputZeichenkette").value; //   1. value Zeichenkette abrufen
+  const substring = document.getElementById("inputTrennstelle").value; //   2. value Trennstelle abrufen
+  const included = string.includes(substring); //   3. Ist Stelle in Zeichenkette vorhanden?
+  const index = string.indexOf(substring); //   4. Index des Substrings
+  const len = substring.length; //   5. Länge des Substrings
 
   //   6. Auwahl davor/danach
   const radio = () => {
