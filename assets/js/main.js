@@ -15,27 +15,28 @@ const zeichentrennung = () => {
   };
   const auswahl = radio();
 
-  //   7. Slicing
-  const slice = () => {
-    if (auswahl === "davor") {
-      let substring_1 = string.slice(0, index);
-      let substring_2 = string.slice(index);
-      return `<p>${substring_1}</p><p>${substring_2}</p> `;
-    } else if (auswahl === "danach") {
-      let substring_1 = string.slice(0, index + len);
-      let substring_2 = string.slice(index + len);
-      return `<p>${substring_1}</p><p>${substring_2}</p> `;
-    } else {
-      return "Keine Auswahl getroffen";
-    }
-  };
-
-  // 8. Output
+  // 7. Slicing & Output
   if (included === true) {
-    slice();
+    const slice = () => {
+      if (auswahl === "davor") {
+        let substring_1 = string.slice(0, index);
+        let substring_2 = string.slice(index);
+        return `<p>${substring_1}</p><p>${substring_2}</p> `;
+      } else if (auswahl === "danach") {
+        let substring_1 = string.slice(0, index + len);
+        let substring_2 = string.slice(index + len);
+        return `<p>${substring_1}</p><p>${substring_2}</p> `;
+      } else {
+        return "Keine Auswahl getroffen";
+      }
+    };
     document.getElementById("output").innerHTML = slice();
   } else {
     document.getElementById("output").innerHTML =
       "Teilzeichenkette nicht enthalten";
   }
 };
+
+// es ist besser die Abfrage included true/false zuerst zu machen,
+// damit die weiteren Berechnungen im false case erst gar nicht ausgeführt werden müssen
+//  (um bei größeren Projekten resourcen zu sparen)
